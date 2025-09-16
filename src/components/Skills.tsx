@@ -1,64 +1,104 @@
-import { 
-  Code, 
-  Palette, 
-  Monitor, 
-  Smartphone, 
-  Database, 
-  GitBranch,
-  Figma,
-  Chrome
-} from "lucide-react";
+import { Github } from "lucide-react";
 
 const Skills = () => {
-  const skills = [
+  const programmingLanguages = [
     {
-      name: "Frontend Development",
-      icon: <Code className="w-8 h-8" />,
-      description: "React, TypeScript, JavaScript, HTML5, CSS3",
-      level: 95
+      name: "HTML5",
+      icon: (
+        <div className="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+          HTML
+        </div>
+      ),
     },
     {
-      name: "UI/UX Design", 
-      icon: <Palette className="w-8 h-8" />,
-      description: "Figma, Adobe XD, Sketch, Prototyping",
-      level: 90
+      name: "CSS3", 
+      icon: (
+        <div className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+          CSS
+        </div>
+      ),
     },
     {
-      name: "Responsive Design",
-      icon: <Monitor className="w-8 h-8" />,
-      description: "Tailwind CSS, Bootstrap, CSS Grid, Flexbox",
-      level: 92
+      name: "JavaScript",
+      icon: (
+        <div className="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center text-black font-bold text-lg">
+          JS
+        </div>
+      ),
     },
     {
-      name: "Mobile Development",
-      icon: <Smartphone className="w-8 h-8" />,
-      description: "React Native, Progressive Web Apps",
-      level: 85
+      name: "Python",
+      icon: (
+        <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+          PY
+        </div>
+      ),
     },
     {
-      name: "Backend Integration",
-      icon: <Database className="w-8 h-8" />,
-      description: "REST APIs, GraphQL, Node.js, MongoDB",
-      level: 80
+      name: "C++",
+      icon: (
+        <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+          C++
+        </div>
+      ),
     },
     {
-      name: "Version Control",
-      icon: <GitBranch className="w-8 h-8" />,
-      description: "Git, GitHub, GitLab, Collaborative Development",
-      level: 88
+      name: "C",
+      icon: (
+        <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+          C
+        </div>
+      ),
+    },
+  ];
+
+  const toolsAndTechnologies = [
+    {
+      name: "GitHub",
+      icon: <Github className="w-16 h-16 text-gray-300" />,
     },
     {
-      name: "Design Tools",
-      icon: <Figma className="w-8 h-8" />,
-      description: "Figma, Adobe Creative Suite, InVision",
-      level: 93
+      name: "Figma",
+      icon: (
+        <div className="w-16 h-16 rounded-lg flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-sm">F</span>
+          </div>
+        </div>
+      ),
     },
     {
-      name: "Web Performance",
-      icon: <Chrome className="w-8 h-8" />,
-      description: "Optimization, SEO, Accessibility, Testing",
-      level: 87
-    }
+      name: "VS Code",
+      icon: (
+        <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+          VS
+        </div>
+      ),
+    },
+    {
+      name: "Git",
+      icon: (
+        <div className="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+          Git
+        </div>
+      ),
+    },
+    {
+      name: "React",
+      icon: (
+        <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+          R
+        </div>
+      ),
+    },
+    {
+      name: "Node.js",
+      icon: (
+        <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+          Node
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -69,58 +109,78 @@ const Skills = () => {
             Skills & <span className="gradient-text">Tools</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            A comprehensive set of technical skills and tools I use to bring ideas to life
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="group p-6 rounded-xl bg-card hover-glow transition-all duration-300 hover:scale-105 fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Icon */}
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br from-primary to-accent text-white mb-4 group-hover:animate-pulse">
-                {skill.icon}
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {skill.description}
-              </p>
-
-              {/* Progress Bar */}
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Proficiency</span>
-                  <span className="gradient-text font-semibold">{skill.level}%</span>
+        {/* Two Card Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          
+          {/* Programming Languages Card */}
+          <div className="group p-8 rounded-2xl bg-card border-2 border-transparent hover:border-primary/30 transition-all duration-500 hover:scale-105 hover-glow fade-in">
+            <h3 className="text-2xl font-bold mb-8 text-center group-hover:gradient-text transition-all duration-300">
+              Programming Languages
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              {programmingLanguages.map((skill, index) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center space-y-4 group/skill cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {/* Icon with hover effect */}
+                  <div className="transform transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:rotate-3 group-hover/skill:shadow-lg">
+                    {skill.icon}
+                  </div>
+                  
+                  {/* Skill Name */}
+                  <h4 className="text-lg font-semibold text-center group-hover/skill:gradient-text transition-all duration-300">
+                    {skill.name}
+                  </h4>
                 </div>
-                <div className="w-full bg-border rounded-full h-2">
-                  <div
-                    className="h-2 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Tools & Technologies Card */}
+          <div className="group p-8 rounded-2xl bg-card border-2 border-transparent hover:border-primary/30 transition-all duration-500 hover:scale-105 hover-glow fade-in">
+            <h3 className="text-2xl font-bold mb-8 text-center group-hover:gradient-text transition-all duration-300">
+              Tools & Technologies
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              {toolsAndTechnologies.map((tool, index) => (
+                <div
+                  key={tool.name}
+                  className="flex flex-col items-center space-y-4 group/tool cursor-pointer"
+                  style={{ animationDelay: `${(index + programmingLanguages.length) * 100}ms` }}
+                >
+                  {/* Icon with hover effect */}
+                  <div className="transform transition-all duration-300 group-hover/tool:scale-110 group-hover/tool:rotate-3 group-hover/tool:shadow-lg">
+                    {tool.icon}
+                  </div>
+                  
+                  {/* Tool Name */}
+                  <h4 className="text-lg font-semibold text-center group-hover/tool:gradient-text transition-all duration-300">
+                    {tool.name}
+                  </h4>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Additional Technologies */}
+        {/* Additional Skills Badge Section */}
         <div className="mt-16 text-center fade-in">
-          <h3 className="text-xl font-semibold mb-6">Technologies I Work With</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <h3 className="text-xl font-semibold mb-6">Also Experienced With</h3>
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              "React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS",
-              "Node.js", "MongoDB", "Git", "Figma", "Adobe XD", "Webpack",
-              "Vite", "REST APIs", "GraphQL", "Jest", "Cypress", "Docker"
+              "TypeScript", "Tailwind CSS", "Bootstrap", "SASS", "Webpack", "Vite",
+              "MongoDB", "MySQL", "REST APIs", "GraphQL", "Docker", "AWS",
+              "Jest", "Cypress", "Photoshop", "Illustrator", "After Effects"
             ].map((tech, index) => (
               <span
                 key={tech}
-                className="px-4 py-2 bg-card text-sm rounded-full border border-border hover-glow transition-all duration-300 hover:scale-105"
+                className="px-4 py-2 bg-secondary text-sm rounded-full border border-border hover:border-primary/50 hover-glow transition-all duration-300 hover:scale-105 cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {tech}
