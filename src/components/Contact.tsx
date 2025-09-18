@@ -35,19 +35,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "srinivas.kanuri@email.com",
-      link: "mailto:srinivas.kanuri@email.com"
+      value: "pathivadasaibalaji588@gmail.com",
+      link: "mailto:pathivadasaibalaji588@gmail.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone", 
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 6300502098",
+      link: "tel:+916300502098"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Vizianagaram, India",
       link: null
     }
   ];
@@ -56,19 +56,19 @@ const Contact = () => {
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      url: "https://github.com/srinivaskanuri",
+      url: "https://github.com/saibalaji",
       color: "hover:text-gray-400"
     },
     {
       name: "LinkedIn", 
       icon: <Linkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/in/srinivaskanuri",
+      url: "https://linkedin.com/in/saibalaji",
       color: "hover:text-blue-400"
     },
     {
       name: "Twitter",
       icon: <Twitter className="w-5 h-5" />,
-      url: "https://twitter.com/srinivaskanuri", 
+      url: "https://twitter.com/saibalaji", 
       color: "hover:text-blue-400"
     }
   ];

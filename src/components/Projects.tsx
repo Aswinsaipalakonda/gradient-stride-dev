@@ -7,55 +7,28 @@ import project3Image from "@/assets/project3.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern, responsive e-commerce platform built with React and TypeScript. Features include product catalog, shopping cart, user authentication, and payment integration.",
+      title: "Bug Fixing",
+      description: "Resolved key bugs to improve platform stability and enhance user experience across multiple NetMaxin applications, ensuring smooth functionality.",
       image: project1Image,
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Stripe API", "Node.js"],
+      technologies: ["JavaScript", "React", "Debugging", "Testing"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Task Management Dashboard", 
-      description: "A comprehensive project management tool with real-time collaboration features, drag-and-drop functionality, and team analytics.",
+      title: "AI Tools Testing", 
+      description: "Tested AI tools for reliability and user satisfaction, ensuring seamless integration within the NetMaxin ecosystem and optimal performance.",
       image: project2Image,
-      technologies: ["React", "Redux", "Material-UI", "Socket.io", "MongoDB"],
+      technologies: ["AI Testing", "Quality Assurance", "Integration", "Performance"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Weather App",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and personalized weather alerts.",
+      title: "UI Improvement",
+      description: "Enhanced the NetMaxin app's interface for a better user experience with modern design principles and responsive layouts.",
       image: project3Image,
-      technologies: ["React Native", "TypeScript", "Weather API", "Maps SDK"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing design skills and development projects with smooth animations and modern UI.",
-      image: project1Image,
-      technologies: ["React", "Framer Motion", "Tailwind CSS", "Vercel"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "An analytics dashboard for social media management with real-time data visualization and performance metrics.",
-      image: project2Image,
-      technologies: ["Vue.js", "Chart.js", "Firebase", "Social APIs"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Learning Management System",
-      description: "A comprehensive LMS with course management, student progress tracking, and interactive learning modules.",
-      image: project3Image,
-      technologies: ["React", "Node.js", "PostgreSQL", "Video.js"],
+      technologies: ["UI/UX", "Frontend", "Responsive Design", "User Experience"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true

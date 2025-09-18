@@ -3,57 +3,70 @@ import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science",
-      institution: "University of Technology",
-      location: "San Francisco, CA",
-      period: "2016 - 2020",
-      grade: "GPA: 3.8/4.0",
-      description: "Specialized in software engineering and web development. Completed coursework in data structures, algorithms, database systems, and human-computer interaction.",
+      degree: "B.Tech in CSE - Cyber Security",
+      institution: "Maharaj Vijayaram Gajapathi Raj College of Engineering (A)",
+      location: "Vizianagaram, India",
+      period: "Sep 2023 - Present",
+      grade: "Currently Pursuing",
+      description: "Specializing in Cyber Security with focus on web security, ethical hacking, and secure software development practices.",
       achievements: [
-        "Dean's List for 6 consecutive semesters",
-        "President of Computer Science Student Association",
-        "Winner of Annual Hackathon 2019"
+        "Active member of Cyber Security Club",
+        "Participating in CTF competitions", 
+        "Learning advanced security protocols"
       ]
     },
     {
-      degree: "Certificate in UI/UX Design",
-      institution: "Design Academy Online",
-      location: "Online",
-      period: "2020 - 2021",
-      grade: "Certificate of Excellence",
-      description: "Comprehensive program covering user research, wireframing, prototyping, and visual design principles. Completed multiple real-world projects with industry mentors.",
+      degree: "Intermediate (MPC)",
+      institution: "Narayana Junior College",
+      location: "Vizianagaram, India",
+      period: "Apr 2020 - Mar 2022",
+      grade: "Completed",
+      description: "Completed intermediate education with Mathematics, Physics, and Chemistry. Built strong analytical and problem-solving foundation.",
       achievements: [
-        "Top 5% of graduating class",
-        "Completed 3 industry client projects",
-        "Specialization in Mobile UI Design"
+        "Strong performance in Mathematics",
+        "Developed interest in programming",
+        "Participated in science exhibitions"
+      ]
+    },
+    {
+      degree: "10th Grade",
+      institution: "St. Joseph's English Medium High School",
+      location: "Vizianagaram, India",
+      period: "June 2016 - Feb 2020",
+      grade: "Completed",
+      description: "Completed secondary education with focus on academics and extracurricular activities.",
+      achievements: [
+        "Good academic performance",
+        "Active in school events",
+        "Developed communication skills"
       ]
     }
   ];
 
   const certifications = [
     {
-      name: "AWS Certified Developer",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-CDA-2023-001"
+      name: "Web Development Certification",
+      issuer: "Online Learning Platform",
+      date: "2024",
+      credentialId: "WEB-DEV-2024-001"
     },
     {
-      name: "Google Analytics Certified",
-      issuer: "Google",
-      date: "2023",
-      credentialId: "GA-2023-SK-001"
+      name: "App Development Certification",
+      issuer: "Mobile Development Institute",
+      date: "2024", 
+      credentialId: "APP-DEV-2024-002"
     },
     {
-      name: "React Developer Certification",
-      issuer: "Meta",
-      date: "2022",
-      credentialId: "META-RDC-2022-456"
+      name: "SEO Analysis Certification",
+      issuer: "Digital Marketing Academy",
+      date: "2024",
+      credentialId: "SEO-2024-003"
     },
     {
-      name: "Adobe Certified Expert - Figma",
-      issuer: "Adobe",
-      date: "2022",
-      credentialId: "ACE-FIG-2022-789"
+      name: "Marketing Certification",
+      issuer: "Marketing Institute",
+      date: "2024",
+      credentialId: "MKT-2024-004"
     }
   ];
 
@@ -136,58 +149,115 @@ const Education = () => {
               </div>
             </div>
 
-            {/* Certifications Column */}
+            {/* Certifications Column - Using Image Auto Slider */}
             <div>
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
                 <Award className="w-6 h-6 text-primary" />
-                Certifications
+                Professional Certifications
               </h3>
               
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-card rounded-lg hover-glow transition-all duration-300 hover:scale-105 fade-in group border border-border"
-                    style={{ animationDelay: `${(index + 2) * 200}ms` }}
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h4 className="font-semibold group-hover:gradient-text transition-all duration-300">
-                          {cert.name}
-                        </h4>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          {cert.issuer} • {cert.date}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          ID: {cert.credentialId}
-                        </p>
-                      </div>
-                      <Award className="w-5 h-5 text-primary flex-shrink-0 ml-3" />
+              <div className="rounded-lg overflow-hidden bg-secondary/30 border border-border">
+                <div className="w-full h-64 relative">
+                  <style>{`
+                    @keyframes scroll-right {
+                      0% {
+                        transform: translateX(0);
+                      }
+                      100% {
+                        transform: translateX(-50%);
+                      }
+                    }
+
+                    .infinite-scroll {
+                      animation: scroll-right 20s linear infinite;
+                    }
+
+                    .scroll-container {
+                      mask: linear-gradient(
+                        90deg,
+                        transparent 0%,
+                        black 10%,
+                        black 90%,
+                        transparent 100%
+                      );
+                      -webkit-mask: linear-gradient(
+                        90deg,
+                        transparent 0%,
+                        black 10%,
+                        black 90%,
+                        transparent 100%
+                      );
+                    }
+
+                    .image-item {
+                      transition: transform 0.3s ease, filter 0.3s ease;
+                    }
+
+                    .image-item:hover {
+                      transform: scale(1.05);
+                      filter: brightness(1.1);
+                    }
+                  `}</style>
+                  
+                  <div className="scroll-container w-full h-full">
+                    <div className="infinite-scroll flex gap-4 w-max h-full">
+                      {[
+                        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2152&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://plus.unsplash.com/premium_photo-1673264933212-d78737f38e48?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://plus.unsplash.com/premium_photo-1675705721263-0bbeec261c49?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1524799526615-766a9833dec0?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2152&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      ].map((image, index) => (
+                        <div
+                          key={index}
+                          className="image-item flex-shrink-0 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-lg overflow-hidden shadow-lg"
+                        >
+                          <img
+                            src={image}
+                            alt={`Certificate ${(index % 8) + 1}`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
+                
+                <div className="p-4 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    Professional certifications in Web Development, App Development, SEO Analysis, and Marketing
+                  </p>
+                </div>
               </div>
 
               {/* Additional Skills */}
               <div className="mt-8 p-6 bg-card rounded-xl hover-glow transition-all duration-300 fade-in">
-                <h4 className="text-lg font-bold mb-4">Additional Learning</h4>
+                <h4 className="text-lg font-bold mb-4">Technical Skills</h4>
                 <div className="space-y-3">
                   <div>
-                    <h5 className="font-semibold text-sm">Online Courses</h5>
+                    <h5 className="font-semibold text-sm">Core Skills</h5>
                     <p className="text-xs text-muted-foreground">
-                      Advanced React Patterns, TypeScript Deep Dive, Web Performance Optimization
+                      Web Development, App Development, SEO Analysis, Marketing
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-sm">Workshops & Conferences</h5>
+                    <h5 className="font-semibold text-sm">Soft Skills</h5>
                     <p className="text-xs text-muted-foreground">
-                      ReactConf 2023, Design Systems Summit, Frontend Masters Live
+                      Leadership, Communication, Problem-Solving
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-sm">Publications</h5>
+                    <h5 className="font-semibold text-sm">Languages</h5>
                     <p className="text-xs text-muted-foreground">
-                      "Modern CSS Grid Techniques" - Medium, "React Performance Tips" - Dev.to
+                      Telugu (Fluent), English (Fluent)
                     </p>
                   </div>
                 </div>

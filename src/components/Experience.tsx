@@ -3,56 +3,17 @@ import { Calendar, MapPin } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Freelancer",
+      company: "NetMaxin Group",
+      location: "Vizianagaram, India",
+      period: "Oct 2024 - Present",
       description: [
-        "Led the development of responsive web applications using React and TypeScript",
-        "Collaborated with UX designers to implement pixel-perfect designs",
-        "Optimized application performance, reducing load times by 40%",
-        "Mentored junior developers and conducted code reviews"
+        "Enhanced NetMaxin's user interface and resolved key bugs for smoother user experience",
+        "Tested and ensured reliability of AI tools within the NetMaxin app",
+        "Verified application stability through comprehensive integration testing",
+        "Contributed to multiple product launches that enhanced clients' digital experiences"
       ],
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js"]
-    },
-    {
-      title: "UI/UX Designer & Frontend Developer",
-      company: "Digital Solutions Ltd.",
-      location: "New York, NY", 
-      period: "2021 - 2022",
-      description: [
-        "Designed and developed user interfaces for multiple client projects",
-        "Created wireframes, prototypes, and design systems in Figma",
-        "Implemented responsive designs with modern CSS frameworks",
-        "Conducted user research and usability testing"
-      ],
-      technologies: ["Figma", "React", "SCSS", "Adobe Creative Suite"]
-    },
-    {
-      title: "Junior Frontend Developer",
-      company: "StartUp Ventures",
-      location: "Austin, TX",
-      period: "2020 - 2021", 
-      description: [
-        "Developed interactive web applications using modern JavaScript frameworks",
-        "Collaborated with backend developers to integrate REST APIs",
-        "Participated in agile development processes and sprint planning",
-        "Contributed to open-source projects and internal tools"
-      ],
-      technologies: ["JavaScript", "Vue.js", "CSS3", "Git"]
-    },
-    {
-      title: "Web Development Intern",
-      company: "Creative Agency Co.",
-      location: "Remote",
-      period: "2019 - 2020",
-      description: [
-        "Assisted in building client websites and landing pages",
-        "Learned modern web development best practices",
-        "Gained experience with responsive design and cross-browser compatibility",
-        "Participated in team meetings and project planning sessions"
-      ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "WordPress"]
+      technologies: ["JavaScript", "React", "UI/UX", "Testing", "Bug Fixing"]
     }
   ];
 

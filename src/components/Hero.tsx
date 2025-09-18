@@ -7,7 +7,7 @@ const Hero = () => {
     // Create a dummy CV download - in a real app, this would be a proper PDF file
     const link = document.createElement('a');
     link.href = '#';
-    link.download = 'Srinivas_Kanuri_CV.pdf';
+    link.download = 'Sai_Balaji_CV.pdf';
     // In a real application, you would link to an actual CV file
     alert('CV download would start here. Please add your actual CV file.');
   };
@@ -20,18 +20,17 @@ const Hero = () => {
           <div className="space-y-6 fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Hello, I'm Srinivas Kanuri,{" "}
-                <span className="gradient-text">UI/UX Designer</span>
+                Hello, I'm Sai Balaji,{" "}
+                <span className="gradient-text">Frontend Developer</span>
               </h1>
               <div className="w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
             </div>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              I'm a UI/UX and Frontend Developer passionate about crafting user-friendly 
-              and visually appealing web experiences. This portfolio website, which I designed 
-              and developed myself using Figma, HTML, CSS, and JavaScript, showcases my skills 
-              and projects. From wireframing and prototyping in Figma to front-end development, 
-              I enjoy the entire process of bringing ideas to life.
+              I'm a passionate Frontend Developer specializing in web development, app development, 
+              SEO analysis, and marketing. Successfully contributed to the launch of multiple products 
+              that enhanced clients' digital experiences at NetMaxin. I have strong leadership, 
+              communication, and problem-solving skills that help me deliver exceptional results.
             </p>
 
             <Button
@@ -51,7 +50,7 @@ const Hero = () => {
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden bg-card">
                   <img
                     src={profileImage}
-                    alt="Srinivas Kanuri - UI/UX Designer"
+                    alt="Sai Balaji - Frontend Developer"
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -18,7 +18,7 @@ const About = () => {
               <div className="w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden hover-glow transition-all duration-300">
                 <img
                   src={profileImage}
-                  alt="About Srinivas Kanuri"
+                  alt="About Sai Balaji"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -29,42 +29,41 @@ const About = () => {
           {/* Right Column - Content */}
           <div className="space-y-6 fade-in">
             <h3 className="text-2xl md:text-3xl font-bold">
-              Passionate Frontend Developer & UI/UX Designer
+              Passionate Frontend Developer & Tech Specialist
             </h3>
             
             <div className="space-y-4 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                With over 3 years of experience in web development and design, I specialize in creating 
-                intuitive user interfaces and seamless user experiences. My journey started with a 
-                fascination for how design and technology can work together to solve real-world problems.
+                Successfully contributed to the launch of multiple products that enhanced clients' digital 
+                experiences at NetMaxin. Played a vital role in supporting the company's growth, helping to 
+                establish NetMaxin as a key player in the tech industry through dedicated freelance work.
               </p>
               
               <p className="text-lg leading-relaxed">
-                I have expertise in modern web technologies including React, TypeScript, Tailwind CSS, 
-                and various design tools like Figma and Adobe Creative Suite. I believe in writing 
-                clean, maintainable code and creating designs that are both beautiful and functional.
+                I specialize in web development, app development, SEO analysis, and marketing. My technical 
+                skills combined with strong leadership and communication abilities allow me to deliver 
+                exceptional results and solve complex problems effectively.
               </p>
               
               <p className="text-lg leading-relaxed">
-                When I'm not coding or designing, I enjoy exploring new technologies, contributing to 
-                open-source projects, and sharing my knowledge with the developer community through 
-                blogs and mentoring.
+                Currently pursuing B.Tech in CSE - Cyber Security, I'm passionate about learning new 
+                technologies and contributing to innovative projects that make a real impact.
               </p>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 pt-6">
               <div className="text-center p-4 rounded-lg bg-card hover-glow transition-all duration-300">
-                <div className="text-2xl font-bold gradient-text">50+</div>
+                <div className="text-2xl font-bold gradient-text">3+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-card hover-glow transition-all duration-300">
-                <div className="text-2xl font-bold gradient-text">3+</div>
+                <div className="text-2xl font-bold gradient-text">1+</div>
                 <div className="text-sm text-muted-foreground">Years Exp</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-card hover-glow transition-all duration-300">
-                <div className="text-2xl font-bold gradient-text">25+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-2xl font-bold gradient-text">4+</div>
+                <div className="text-sm text-muted-foreground">Skills</div>
               </div>
             </div>
           </div>
